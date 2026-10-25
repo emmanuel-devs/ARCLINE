@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ARCLINE — Architecture for the way we feel",
-  description: "A considered architecture studio shaping spaces, rituals, and the way we live.",
+  title: "ARCLINE — From Concept to Better Living",
+  description: "Architecture and design for better living. Explore our services, selected projects, and thoughtful approach to the built environment.",
   metadataBase: new URL("https://arcline.studio"),
   openGraph: {
     title: "ARCLINE — Architecture for the way we feel",
-    description: "Spaces made to move you.",
+    description: "From concept to better living.",
     type: "website"
   }
 };
