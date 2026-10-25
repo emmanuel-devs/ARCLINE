@@ -1,124 +1,77 @@
+const services = [
+  ["01", "Residential Building", "Homes shaped around the people who live in them, with thoughtful details and a lasting sense of place."],
+  ["02", "Business Tower", "Workplaces that balance clarity, ambition, and the energy of the city around them."],
+  ["03", "Hospitality Tower", "Welcoming destinations with a distinctive point of view and an unmistakable sense of arrival."],
+  ["04", "Industrial Building", "Purposeful spaces that bring performance, efficiency, and considered design together."],
+  ["05", "Factory House", "Adaptable, well-planned environments designed to support the work happening inside."],
+  ["06", "Educational House", "Learning environments that encourage curiosity, connection, and new ways of thinking."]
+];
+
 const projects = [
-  {
-    number: "01",
-    name: "The Still House",
-    place: "Hudson Valley, New York",
-    type: "Residential · 2025",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
-    className: "project-tall"
-  },
-  {
-    number: "02",
-    name: "Casa de la Luz",
-    place: "Oaxaca, Mexico",
-    type: "Hospitality · 2024",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-    className: "project-wide"
-  },
-  {
-    number: "03",
-    name: "A Quiet Practice",
-    place: "Copenhagen, Denmark",
-    type: "Workplace · 2024",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
-    className: "project-small"
-  }
+  { name: "The Still House", type: "Residential · 2025", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", className: "project-one" },
+  { name: "Lines of Light", type: "Commercial · 2024", image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85", className: "project-two" },
+  { name: "A Quiet Practice", type: "Workplace · 2024", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85", className: "project-three" }
 ];
 
 export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#" aria-label="Arcline home">ARCLINE<span>®</span></a>
-        <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#work">Selected work</a>
-          <a href="#studio">Our approach</a>
-          <a href="#services">Expertise</a>
+        <a className="brand" href="#" aria-label="Arcline home"><span className="brand-mark">◇</span><span>Arcline</span></a>
+        <nav className="main-nav" aria-label="Main navigation">
+          <a href="#">Home</a><a href="#about">About</a><a href="#services">Service</a><a href="#projects">Projects</a><a href="#journal">Blog</a>
         </nav>
-        <a className="header-contact" href="#contact">Start a conversation <span>↗</span></a>
-        <a className="mobile-menu" href="#contact" aria-label="Contact">MENU <span>↗</span></a>
+        <a className="header-cta" href="#contact">Contact Us Now <span>↗</span></a>
+        <a className="mobile-menu" href="#mobile-links">Menu <span>↗</span></a>
       </header>
 
       <section className="hero">
-        <div className="hero-image" role="img" aria-label="Sculptural modern architecture framed by natural light" />
-        <div className="hero-shade" />
-        <div className="hero-topline"><span>INDEPENDENT ARCHITECTURE STUDIO</span><span>NEW YORK · COPENHAGEN · EVERYWHERE</span></div>
-        <div className="hero-copy">
-          <p className="eyebrow"><span className="eyebrow-dot" /> SPACE TO FEEL SOMETHING</p>
-          <h1>Make room<br />for <em>feeling.</em></h1>
-          <div className="hero-bottom">
-            <p>We shape thoughtful spaces for living, gathering, and everything that makes us human.</p>
-            <a className="round-link" href="#work" aria-label="Explore selected work">↓</a>
-          </div>
+        <div className="hero-photo" />
+        <div className="hero-overlay" />
+        <div className="hero-top"><span>INDEPENDENT ARCHITECTURE STUDIO</span><span>NEW YORK · COPENHAGEN · EVERYWHERE</span></div>
+        <div className="hero-content">
+          <p className="hero-eyebrow"><span /> ARCHITECTURE WITH INTENTION</p>
+          <h1>FROM CONCEPT TO<br /><span>BETTER LIVING</span></h1>
+          <div className="hero-description"><p>We envision a world where every space we create enhances the quality of life for its occupants while contributing positively to its surroundings.</p><a href="#contact" className="pill-button">Book A Free Call <span>↗</span></a></div>
         </div>
-        <div className="hero-index"><span>01 / 04</span><span>FORM FOLLOWS FEELING</span></div>
+        <div className="hero-foot"><span>01 / 04</span><span>DESIGNING FOR THE WAY WE LIVE</span></div>
       </section>
 
-      <section className="intro section-pad" id="studio">
-        <div className="section-kicker"><span>01 — A POINT OF VIEW</span><span>DESIGNING FOR THE HUMAN EXPERIENCE</span></div>
-        <div className="intro-grid">
-          <h2>Good spaces don’t just look a certain way.<br /><em>They make you feel a certain way.</em></h2>
-          <div className="intro-note">
-            <p>We believe architecture is more than what you see. It’s the morning light across the floor. The pause before you enter. The feeling of being exactly where you belong.</p>
-            <a className="text-link" href="#contact">A little more about us <span>↗</span></a>
+      <section className="about section-shell" id="about">
+        <div className="section-label">ABOUT US</div>
+        <div className="about-main">
+          <p className="about-lead">At Arcline, we believe that architecture is <strong>more than just designing buildings</strong>; it’s about <strong>creating spaces</strong> that inspire and transform lives. Our approach, founded on the principles of innovation, sustainability, and excellence, brings thoughtful design to everyday life.</p>
+          <div className="about-feature">
+            <div className="about-image" role="img" aria-label="Modern terracotta and glass architecture" />
+            <div className="quote-card"><p>“We envision a world where every space we create enhances the quality of life for its occupants while contributing positively to the environment. Our goal is to set new standards in architecture through thoughtful, enduring design.”</p><div className="person"><span className="person-avatar">AR</span><div><strong>Alexandra Reed</strong><small>Principal Architect</small></div></div></div>
           </div>
         </div>
       </section>
 
-      <section className="work section-pad" id="work">
-        <div className="section-heading">
-          <div><span className="section-label">02 — SELECTED WORK</span><h2>Spaces with<br /><em>a point of view.</em></h2></div>
-          <p>A collection of places shaped by their people, their context, and the lives unfolding inside them.</p>
-        </div>
-        <div className="project-grid">
-          {projects.map((project) => (
-            <article className={`project-card ${project.className}`} key={project.number}>
-              <a href="#contact" className="project-image" style={{ backgroundImage: `url("${project.image}")` }} aria-label={`Discuss a project like ${project.name}`}>
-                <span className="project-number">{project.number}</span><span className="project-arrow">↗</span>
-              </a>
-              <div className="project-meta"><div><h3>{project.name}</h3><p>{project.place}</p></div><span>{project.type}</span></div>
-            </article>
-          ))}
-        </div>
-        <a className="text-link all-work" href="#contact">Have something in mind? Let’s talk <span>↗</span></a>
-      </section>
-
-      <section className="interlude">
-        <div className="interlude-image" />
-        <div className="interlude-overlay" />
-        <div className="interlude-content"><span className="section-label">OUR DESIGN PHILOSOPHY</span><p>Less noise.<br />More <em>meaning.</em></p><span className="interlude-caption">A considered approach to the spaces we inhabit.</span></div>
-      </section>
-
-      <section className="services section-pad" id="services">
-        <div className="section-kicker"><span>03 — WHAT WE DO</span><span>FROM FIRST THOUGHT TO FINAL DETAIL</span></div>
-        <div className="services-layout">
-          <h2>Thoughtful by<br /><em>design.</em></h2>
-          <div className="service-list">
-            <div className="service-row"><span>01</span><div><h3>Architecture</h3><p>Distinctive buildings grounded in place, purpose, and possibility.</p></div><span className="service-symbol">↗</span></div>
-            <div className="service-row"><span>02</span><div><h3>Interior environments</h3><p>Material, light, and proportion working together in quiet harmony.</p></div><span className="service-symbol">↗</span></div>
-            <div className="service-row"><span>03</span><div><h3>Creative direction</h3><p>A clear visual and spatial language for brands and experiences.</p></div><span className="service-symbol">↗</span></div>
-            <div className="service-row"><span>04</span><div><h3>Spatial strategy</h3><p>Early thinking that turns ambitious ideas into grounded decisions.</p></div><span className="service-symbol">↗</span></div>
-          </div>
+      <section className="services-section" id="services">
+        <div className="services-inner">
+          <div className="center-heading"><span className="section-label">WHAT WE DO</span><h2>Comprehensive services<br />for optimal results.</h2></div>
+          <div className="services-grid">{services.map(([number, title, description]) => <article className="service-card" key={number}><span className="service-number">{number}</span><h3>{title}</h3><p>{description}</p><a href="#contact">View More <span>↗</span></a></article>)}</div>
         </div>
       </section>
 
-      <section className="studio-note section-pad">
-        <div className="studio-note-image" />
-        <div className="studio-note-copy"><span className="section-label">A SMALL, INTENTIONAL STUDIO</span><h2>Curious minds.<br /><em>Considered work.</em></h2><p>We’re an independent team of architects, designers, and attentive listeners. We keep our studio deliberately small so every project gets the time, care, and clear thinking it deserves.</p><a className="text-link" href="#contact">Meet the studio <span>↗</span></a></div>
+      <section className="film-strip" aria-label="A glimpse into our architecture"><div className="film-image" /><div className="film-overlay" /><a href="#projects" className="play-button" aria-label="Explore our projects">▶</a><span className="film-caption">DESIGNED TO BE EXPERIENCED</span></section>
+
+      <section className="proof-section">
+        <div className="stats-card"><div><strong>20<span>+</span></strong><small>Years in Business</small></div><div><strong>42</strong><small>Awards & Recognition</small></div><div><strong>130</strong><small>Projects Completed</small></div><div><strong>2k<span>+</span></strong><small>People Inspired</small></div></div>
+        <div className="proof-right"><article className="testimonial"><span className="section-label">CLIENT STORIES</span><p>“From the first conversation to the final walkthrough, the team brought exceptional care, clarity, and attention to detail to every decision.”</p><div className="testimonial-by"><span className="person-avatar">JS</span><div><strong>Jordan Simmons</strong><small>Residential client</small></div></div><div className="testimonial-arrows"><span>←</span><span>→</span></div></article><div className="clients"><span>TRUSTED BY TEAMS AT</span><div className="client-logos"><b>nord</b><b>◈ Luma</b><b>NRTH</b><b>◉ Forma</b><b>LINE /</b></div></div></div>
       </section>
 
-      <section className="contact section-pad" id="contact">
-        <span className="section-label">04 — THE NEXT CHAPTER</span>
-        <h2>Have a space<br />in <em>mind?</em></h2>
-        <div className="contact-bottom"><p>Tell us what you’re imagining.<br />We’ll take it from there.</p><a href="mailto:hello@arcline.studio" className="contact-button">Let’s talk <span>↗</span></a></div>
+      <section className="projects-section" id="projects">
+        <div className="projects-heading"><div><span className="section-label">SELECTED WORK · 2022—2025</span><h2>Take a look at our<br />recent projects.</h2></div><a href="#contact" className="blue-button">See All Projects <span>↗</span></a></div>
+        <div className="projects-grid">{projects.map((project, index) => <article className={`project-card ${project.className}`} key={project.name}><a className="project-image" href="#contact" style={{ backgroundImage: `url("${project.image}")` }} aria-label={`Discuss a project like ${project.name}`}><span className="project-index">0{index + 1}</span><span className="project-arrow">↗</span></a><div className="project-meta"><h3>{project.name}</h3><span>{project.type}</span></div></article>)}</div>
       </section>
 
-      <footer className="site-footer">
-        <a className="wordmark footer-mark" href="#">ARCLINE<span>®</span></a>
-        <span className="footer-note">SPACE FOR WHAT MATTERS.</span>
-        <div className="footer-links"><a href="#work">Instagram ↗</a><a href="mailto:hello@arcline.studio">Email ↗</a></div>
-        <span className="copyright">© ARCLINE STUDIO 2025</span>
-      </footer>
+      <section className="journal-section" id="journal"><div className="journal-heading"><div><span className="section-label">FROM THE JOURNAL</span><h2>Articles and resources.</h2></div><a href="#contact" className="text-link">Explore insights <span>↗</span></a></div><div className="journal-grid"><article><div className="journal-image journal-one" /><span>THINKING · 06 MIN READ</span><h3>How thoughtful architecture changes the way we live</h3><a href="#contact">Read article ↗</a></article><article><div className="journal-image journal-two" /><span>MATERIALS · 04 MIN READ</span><h3>Choosing materials that age with grace</h3><a href="#contact">Read article ↗</a></article><article><div className="journal-image journal-three" /><span>PROCESS · 05 MIN READ</span><h3>From first sketch to a place that feels like home</h3><a href="#contact">Read article ↗</a></article></div></section>
+
+      <section className="contact-section" id="contact"><span className="section-label">HAVE A PROJECT IN MIND?</span><h2>Let’s build something<br /><em>meaningful.</em></h2><div className="contact-bottom"><p>Have an idea, a site, or just the beginning of a thought?<br />We’d love to hear about it.</p><a className="blue-button" href="mailto:hello@arcline.studio">Start a conversation <span>↗</span></a></div></section>
+
+      <footer className="site-footer" id="mobile-links"><a className="brand footer-brand" href="#"><span className="brand-mark">◇</span><span>Arcline</span></a><span className="footer-tagline">SPACES THAT MOVE US.</span><div className="footer-links"><a href="#projects">Projects</a><a href="#journal">Journal</a><a href="mailto:hello@arcline.studio">Contact ↗</a></div><small>© ARCLINE STUDIO 2026</small></footer>
     </main>
   );
 }
